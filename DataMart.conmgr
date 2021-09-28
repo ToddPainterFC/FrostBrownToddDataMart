@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DataMart"
+  DTS:DTSID="{E6AADEF2-0A6E-453B-9B17-A517A5C8830C}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=cinvsql01;User ID=BoomiService;Initial Catalog=DataMart;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI2bdbRsVfUy3bO5rGdh49gAAAAACAAAAAAADZgAAwAAAABAAAABGuXzXxUP6edhyGW5pmXyFAAAAAASAAACgAAAAEAAAAKy6Zqac+0r1UbsoDFHR26uAAAAAf2Yi3xnWAQn6g4eSUIeJjO5BpwPkl6uumPwefAwKzN/ssWogrXsO3duSlnwsBxZkV1RZE+1s8QRAdmDzEDOqRKuLFQQflmLrcD367sYaAqklGZnYLVw53MYXjntx4SFMHhtnbCuiEWQZLdyVHLFqLiO1XN1iEBrM1stSX6BaJJUUAAAAXr31NE3EaT7ov70TaDxo1nIWJZI=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

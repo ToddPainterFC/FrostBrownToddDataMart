@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DW_Analytics"
+  DTS:DTSID="{1C46D5BC-F0E3-4F87-BAFC-A8BE4393B39B}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=louvadrspotsql2;User ID=BoomiService;Initial Catalog=DW_Analytics;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI2bdbRsVfUy3bO5rGdh49gAAAAACAAAAAAADZgAAwAAAABAAAACxb8hkStTbZezV5Jg10cmRAAAAAASAAACgAAAAEAAAAGO5hlhWH3ZdGLtgpcc4Ut2AAAAA46E1oMu+uSKrB496JfWHy4mGUH/FHrQ1w0PqXKe+y88hRR1E/wxkdT5TYsZur3rPJLuyoR4yFlrVfA9lCuR1xparnWYtzHkrKFmN+qMEXCxGo6dAcAxeXUtXrtpz799zjQmrrZnsQyVAxqd/4uEH3hy55VFygjOZN47o1Xn6YfMUAAAAynYE57jK1+d2UtcopBC8rvtoG5c=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Aderant"
+  DTS:DTSID="{8D5AFB68-9CC2-4F36-B313-2270E560F6F0}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=louvadrsql;User ID=BoomiService;Initial Catalog=ADR_LIVE;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI2bdbRsVfUy3bO5rGdh49gAAAAACAAAAAAADZgAAwAAAABAAAABZmSxjx3u+0jgHZ8Exc04PAAAAAASAAACgAAAAEAAAAI3iHybmmB+uYXaVHND8YYGAAAAAwpsLxfsHHwt7hvpN+6zkFLPYV1lsS5W13u6weZfZhunl8VwQHRyyE9fyTc8hm1Cd3lOxAWS79skA9iCx4ckY7qkNrwWwGObuG7nmDAZpn/rVArTC4tSpxQSnFqPOfqSQLTh1JeUGqqihoeCN6b6iv9/u7l7bH/zbFZQLtfrkeUMUAAAA3FERvCVTDvlW8VuPvUdyJmBiTjU=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
