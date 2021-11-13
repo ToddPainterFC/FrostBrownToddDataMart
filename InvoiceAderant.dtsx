@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="InvoiceAderant"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{71B0CE44-66F6-43A1-B2EF-938C806ABD49}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{172D2044-7AF3-4252-8272-B681D128F57B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -394,7 +394,11 @@ inner join BLT_bill i on a.BILL_TRAN_UNO=i.TRAN_UNO
 inner join HBM_Matter m on a.matter_uno =m.matter_uno
 inner join hbm_client c on m.client_uno=c.client_uno
 Where ar_status='o'
-Group by m.Client_uno),Lastpay  (Client_uno,Last_rcpt_date) as (Select tt.client_uno,Max(Last_rcpt_date) from TBM_wip_ar_summary sr
+
+
+Group by m.Client_uno),
+
+ Lastpay  (Client_uno,Last_rcpt_date) as (Select tt.client_uno,Max(Last_rcpt_date) from TBM_wip_ar_summary sr
 inner join HBM_matter tt on sr.matter_uno=tt.matter_uno
 Group by tt.client_uno)
 
@@ -405,6 +409,10 @@ WHERE  am.TRAN_TYPE in ('CR','RA') and AR_status='o'
 and am.ar_total&lt;0
 group by bl.Bill_num
 )
+
+
+
+
 
 select p.empl_uno,p.employee_code
 	--,p.employee_name
@@ -438,14 +446,14 @@ inner join Client on c.client_uno=Client.Client_uno
 inner join TBM_wip_AR_summary su on a.matter_uno =su.matter_uno
 inner join Lastpay on c.client_uno=lastpay.client_uno
 left outer join lastbillpay on i.bill_num=lastbillpay.bill_num
-Where a.TOTAL_AR &lt;&gt;0
-and a.total_ar&gt;='5000'
-and s.average_Payment_days&lt;&gt;'0'
+Where a.TOTAL_AR &gt;0
+
 --and s.average_Payment_days&lt;&gt;'0'
-group by p.empl_uno,p.employee_code,p.employee_name,c.client_code,m.matter_code,c.client_name,m.matter_name,i.bill_num,i.bill_date,su.last_rcpt_date, lastpay.last_rcpt_date,lastbillpay.tran_date,a.TOTAL_AR
+group by p.empl_uno,p.employee_code,p.employee_name,c.client_code,C.client_name,m.matter_code,m.matter_name,i.bill_num,i.bill_date,su.last_rcpt_date, lastpay.last_rcpt_date,lastbillpay.tran_date,a.TOTAL_AR
 --,lastbillpay.tran_date
-having dateadd(day,Avg(s.Average_payment_days),Convert(date,Bill_date+5))&lt;Convert(Date,Getdate())
-and sum(datediff(day,convert(date,bill_date),getdate()))&lt;='365'</property>
+--having dateadd(day,Avg(s.Average_payment_days),Convert(date,Bill_date+5))&lt;Convert(Date,Getdate())
+--and sum(datediff(day,convert(date,bill_date),getdate()))&lt;='365'
+--Order by Priority desc, [ Outstanding AR] desc</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -992,14 +1000,6 @@ and sum(datediff(day,convert(date,bill_date),getdate()))&lt;='365'</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
@@ -1009,6 +1009,14 @@ and sum(datediff(day,convert(date,bill_date),getdate()))&lt;='365'</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

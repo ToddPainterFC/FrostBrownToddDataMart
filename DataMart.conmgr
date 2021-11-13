@@ -10,7 +10,7 @@
       DTS:ConnectionString="Data Source=cinvsql01;User ID=BoomiService;Initial Catalog=DataMart;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI2bdbRsVfUy3bO5rGdh49gAAAAACAAAAAAADZgAAwAAAABAAAABGuXzXxUP6edhyGW5pmXyFAAAAAASAAACgAAAAEAAAAKy6Zqac+0r1UbsoDFHR26uAAAAAf2Yi3xnWAQn6g4eSUIeJjO5BpwPkl6uumPwefAwKzN/ssWogrXsO3duSlnwsBxZkV1RZE+1s8QRAdmDzEDOqRKuLFQQflmLrcD367sYaAqklGZnYLVw53MYXjntx4SFMHhtnbCuiEWQZLdyVHLFqLiO1XN1iEBrM1stSX6BaJJUUAAAAXr31NE3EaT7ov70TaDxo1nIWJZI=</DTS:Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAI2bdbRsVfUy3bO5rGdh49gAAAAACAAAAAAADZgAAwAAAABAAAACm5SMt2L93D8YYlogBjeBvAAAAAASAAACgAAAAEAAAALiY7+mbo48BKwcxAc3woFiAAAAAQ5RZ8aT/AeBwh84QD6P1SClJ2HwY4kf7UL2oj3l4Lxtx7H4EaWXRwpCCZDIo7JhtgaJH34fgH6j7w863XPJTQXOpaIcqTTafdpuXV8VeyuiYY8tkUPl3O/Ae3aUFOVVtNfGaZ/KRxeTiioD7OKezmpwl8zcXOoq9Sb3w3rEB8UMUAAAATDAofdNDhWoIV/oBV1R64SwvnSQ=</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

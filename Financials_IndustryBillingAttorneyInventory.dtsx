@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="8/29/2021 7:40:58 PM"
+  DTS:CreationDate="10/7/2021 3:36:04 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="CINVSFDEV01"
   DTS:CreatorName="DOM\todd.painter"
-  DTS:DTSID="{6A16581C-8C5B-4321-B179-BD5CAF6ECE84}"
+  DTS:DTSID="{223799C7-BF9B-4191-84F7-48961413FF48}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.166"
   DTS:LocaleID="1033"
-  DTS:ObjectName="MatterAderant"
+  DTS:ObjectName="Financials_IndustryBillingAttorneyInventory"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{20BA092B-77A0-4B19-A38A-E72DB6F46821}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6A6F0592-D987-4507-8528-1AEAB0A9E905}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{6E1C477F-A8D5-4243-BED3-E9BD316824F8}"
+      DTS:DTSID="{419BD5D2-3694-4BE5-911E-675B5C58B4ED}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -47,7 +47,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[HS_Stage].[matter_stage]</property>
+                  name="OpenRowset">[HS_Stage].[financials_industries_billing_attorney_inventory]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -110,69 +110,35 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[matter_key]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MATTER_KEY]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MATTER_ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="16"
-                      cachedName="MATTER_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[matter_id]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MATTER_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MATTER_NAME]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="40"
-                      cachedName="MATTER_NAME"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[matter_name]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MATTER_NAME]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CLIENT_KEY]"
                       cachedDataType="i4"
                       cachedName="CLIENT_KEY"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[client_key]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CLIENT_KEY]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CLIENT_ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="CLIENT_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[client_id]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CLIENT_ID]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UNAPPLIED]"
+                      cachedDataType="numeric"
+                      cachedName="UNAPPLIED"
+                      cachedPrecision="38"
+                      cachedScale="10"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[unapplied]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNAPPLIED]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BILLING_PERSON_KEY]"
-                      cachedDataType="i4"
-                      cachedName="BILLING_PERSON_KEY"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[billing_person_key]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BILLING_PERSON_KEY]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ON_ACCOUNT_FEES]"
+                      cachedDataType="numeric"
+                      cachedName="ON_ACCOUNT_FEES"
+                      cachedPrecision="38"
+                      cachedScale="10"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[on_account_fees]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ON_ACCOUNT_FEES]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BILLING_PERSON_CODE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="6"
-                      cachedName="BILLING_PERSON_CODE"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[billing_person_code]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BILLING_PERSON_CODE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[status_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="status_code"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status_code]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[status_code]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[open_date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="open_date"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[open_date]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[open_date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[close_date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="close_date"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[close_date]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[close_date]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ON_ACCOUNT_DISB]"
+                      cachedDataType="numeric"
+                      cachedName="ON_ACCOUNT_DISB"
+                      cachedPrecision="38"
+                      cachedScale="10"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[on_account_disb]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ON_ACCOUNT_DISB]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -181,51 +147,27 @@
                       dataType="i4"
                       name="matter_key" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[matter_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="matter_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[matter_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="250"
-                      name="matter_name" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[client_key]"
                       dataType="i4"
                       name="client_key" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[client_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="client_id" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[unapplied]"
+                      dataType="numeric"
+                      name="unapplied"
+                      precision="25"
+                      scale="10" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[billing_person_key]"
-                      dataType="i4"
-                      name="billing_person_key" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[on_account_fees]"
+                      dataType="numeric"
+                      name="on_account_fees"
+                      precision="25"
+                      scale="10" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[billing_person_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="billing_person_code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="25"
-                      name="status_code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[open_date]"
-                      dataType="dbTimeStamp"
-                      name="open_date" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[close_date]"
-                      dataType="dbTimeStamp"
-                      name="close_date" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[on_account_disb]"
+                      dataType="numeric"
+                      name="on_account_disb"
+                      precision="25"
+                      scale="10" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -279,22 +221,18 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">Select 
-	M.Matter_uno AS MATTER_KEY
-	,M.Matter_code AS MATTER_ID	
-	,M.Matter_name AS MATTER_NAME
-	,M.Client_uno AS CLIENT_KEY
-	,c.client_code as CLIENT_ID
-	,M.Bill_empl_uno AS BILLING_PERSON_KEY
-	,P.employee_code as BILLING_PERSON_CODE
-	,m.status_code
-	,m.open_date
-	,m.close_date
-From HBM_Matter M
-left outer join HBM_Client C on M.client_uno = C.client_uno
-left outer join HBM_PERSNL P on M.Bill_empl_uno = P.empl_uno
-Where M.Matter_Uno&gt;0
-AND M.CLOSE_DATE IS NULL OR M.CLOSE_DATE&gt;DATEADD(YYYY,-3,GETDATE())</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select 
+	 SM.MATTER_UNO AS MATTER_KEY
+	 ,SM.CLIENT_UNO AS CLIENT_KEY
+	 --,SM.BILL_EMPL_UNO AS BILLING_PERSON_KEY
+	 ,SUM(UNAPPLIED) AS UNAPPLIED
+	 ,SUM(ON_ACCOUNT_FEES) AS ON_ACCOUNT_FEES
+	 ,SUM (ON_ACCOUNT_DISB) AS ON_ACCOUNT_DISB
+from SUM_MATTER SM
+WHERE UNAPPLIED IS NOT NULL
+OR ON_ACCOUNT_FEES IS NOT NULL
+OR ON_ACCOUNT_DISB IS NOT NULL
+GROUP BY SM.MATTER_UNO,SM.CLIENT_UNO--,SM.BILL_EMPL_UNO</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -340,28 +278,6 @@ AND M.CLOSE_DATE IS NULL OR M.CLOSE_DATE&gt;DATEADD(YYYY,-3,GETDATE())</property
                       name="MATTER_KEY"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MATTER_ID]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MATTER_ID]"
-                      length="16"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MATTER_ID]"
-                      name="MATTER_ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MATTER_NAME]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MATTER_NAME]"
-                      length="40"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MATTER_NAME]"
-                      name="MATTER_NAME"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CLIENT_KEY]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
@@ -371,64 +287,37 @@ AND M.CLOSE_DATE IS NULL OR M.CLOSE_DATE&gt;DATEADD(YYYY,-3,GETDATE())</property
                       name="CLIENT_KEY"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CLIENT_ID]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNAPPLIED]"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CLIENT_ID]"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CLIENT_ID]"
-                      name="CLIENT_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UNAPPLIED]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[UNAPPLIED]"
+                      name="UNAPPLIED"
+                      precision="38"
+                      scale="10"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BILLING_PERSON_KEY]"
-                      dataType="i4"
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ON_ACCOUNT_FEES]"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BILLING_PERSON_KEY]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BILLING_PERSON_KEY]"
-                      name="BILLING_PERSON_KEY"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ON_ACCOUNT_FEES]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ON_ACCOUNT_FEES]"
+                      name="ON_ACCOUNT_FEES"
+                      precision="38"
+                      scale="10"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BILLING_PERSON_CODE]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ON_ACCOUNT_DISB]"
+                      dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BILLING_PERSON_CODE]"
-                      length="6"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[BILLING_PERSON_CODE]"
-                      name="BILLING_PERSON_CODE"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[status_code]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[status_code]"
-                      length="5"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[status_code]"
-                      name="status_code"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[open_date]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[open_date]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[open_date]"
-                      name="open_date"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[close_date]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[close_date]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[close_date]"
-                      name="close_date"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ON_ACCOUNT_DISB]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ON_ACCOUNT_DISB]"
+                      name="ON_ACCOUNT_DISB"
+                      precision="38"
+                      scale="10"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -438,51 +327,27 @@ AND M.CLOSE_DATE IS NULL OR M.CLOSE_DATE&gt;DATEADD(YYYY,-3,GETDATE())</property
                       dataType="i4"
                       name="MATTER_KEY" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MATTER_ID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="16"
-                      name="MATTER_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MATTER_NAME]"
-                      codePage="1252"
-                      dataType="str"
-                      length="40"
-                      name="MATTER_NAME" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CLIENT_KEY]"
                       dataType="i4"
                       name="CLIENT_KEY" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CLIENT_ID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="CLIENT_ID" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UNAPPLIED]"
+                      dataType="numeric"
+                      name="UNAPPLIED"
+                      precision="38"
+                      scale="10" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BILLING_PERSON_KEY]"
-                      dataType="i4"
-                      name="BILLING_PERSON_KEY" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ON_ACCOUNT_FEES]"
+                      dataType="numeric"
+                      name="ON_ACCOUNT_FEES"
+                      precision="38"
+                      scale="10" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BILLING_PERSON_CODE]"
-                      codePage="1252"
-                      dataType="str"
-                      length="6"
-                      name="BILLING_PERSON_CODE" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[status_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="status_code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[open_date]"
-                      dataType="dbTimeStamp"
-                      name="open_date" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[close_date]"
-                      dataType="dbTimeStamp"
-                      name="close_date" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ON_ACCOUNT_DISB]"
+                      dataType="numeric"
+                      name="ON_ACCOUNT_DISB"
+                      precision="38"
+                      scale="10" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -496,60 +361,31 @@ AND M.CLOSE_DATE IS NULL OR M.CLOSE_DATE&gt;DATEADD(YYYY,-3,GETDATE())</property
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MATTER_KEY]"
                       name="MATTER_KEY" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MATTER_ID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="16"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MATTER_ID]"
-                      name="MATTER_ID" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MATTER_NAME]"
-                      codePage="1252"
-                      dataType="str"
-                      length="40"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MATTER_NAME]"
-                      name="MATTER_NAME" />
-                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CLIENT_KEY]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CLIENT_KEY]"
                       name="CLIENT_KEY" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CLIENT_ID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CLIENT_ID]"
-                      name="CLIENT_ID" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UNAPPLIED]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UNAPPLIED]"
+                      name="UNAPPLIED"
+                      precision="38"
+                      scale="10" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BILLING_PERSON_KEY]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BILLING_PERSON_KEY]"
-                      name="BILLING_PERSON_KEY" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ON_ACCOUNT_FEES]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ON_ACCOUNT_FEES]"
+                      name="ON_ACCOUNT_FEES"
+                      precision="38"
+                      scale="10" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BILLING_PERSON_CODE]"
-                      codePage="1252"
-                      dataType="str"
-                      length="6"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BILLING_PERSON_CODE]"
-                      name="BILLING_PERSON_CODE" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[status_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[status_code]"
-                      name="status_code" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[open_date]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[open_date]"
-                      name="open_date" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[close_date]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[close_date]"
-                      name="close_date" />
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ON_ACCOUNT_DISB]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ON_ACCOUNT_DISB]"
+                      name="ON_ACCOUNT_DISB"
+                      precision="38"
+                      scale="10" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -594,7 +430,7 @@ AND M.CLOSE_DATE IS NULL OR M.CLOSE_DATE&gt;DATEADD(YYYY,-3,GETDATE())</property
         <NodeLayout
           Size="151,42"
           Id="Package\Data Flow Task"
-          TopLeft="105,112" />
+          TopLeft="96,98" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -604,27 +440,27 @@ AND M.CLOSE_DATE IS NULL OR M.CLOSE_DATE&gt;DATEADD(YYYY,-3,GETDATE())</property
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="157,105" />
-        <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="148,288" />
+          TopLeft="104,328" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="111,106" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="232.75,147">
+          TopLeft="187.75,148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,141"
+              EndConnector="0,180"
               Start="0,0"
-              End="0,133.5">
+              End="0,172.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,133.5" />
+                    End="0,172.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

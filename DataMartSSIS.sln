@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "DataMartSSIS", "DataMartSSIS\DataMartSSIS.dtproj", "{023D5199-94C2-4644-820C-8BC245B1E7CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{023D5199-94C2-4644-820C-8BC245B1E7CC}.Development|Default.ActiveCfg = Development
+		{023D5199-94C2-4644-820C-8BC245B1E7CC}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39EA9036-4A6C-49DB-BA89-789CA43BBEA3}
+	EndGlobalSection
+EndGlobal
